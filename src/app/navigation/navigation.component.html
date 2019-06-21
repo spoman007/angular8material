@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  mode="over"
+  [opened]="false"
+>
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink=''><mat-icon style="padding-right: 5px">home</mat-icon> Dashboard</a>
+      <a mat-list-item routerLink="/projects"><mat-icon style="padding-right: 5px">view_list</mat-icon> Projects</a>
+      <a mat-list-item routerLink="/address"><mat-icon style="padding-right: 5px">contacts</mat-icon> Address</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <span>angular8material</span>
+    </mat-toolbar>
+    <div style="margin:20px">
+      <router-outlet></router-outlet>
+  </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
