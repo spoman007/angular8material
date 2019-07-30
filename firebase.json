@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "./dist/angular8material",
+    "public": "./angular8material",
     "ignore": [
       "firebase.json",
       "**/.*",
