@@ -13,7 +13,7 @@ export class PiechartComponent {
       type:  'pie'
     },
     title: {
-      text: 'Sample chart'
+      text: 'Pie chart'
     },
     credits: {
       enabled: false

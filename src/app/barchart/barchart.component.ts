@@ -13,7 +13,7 @@ export class BarchartComponent {
       type:  'bar'
     },
     title: {
-      text: 'Sample chart'
+      text: 'Bar chart'
     },
     credits: {
       enabled: false
