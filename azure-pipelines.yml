@@ -26,11 +26,11 @@ steps:
     Contents: |
       firebase.json
       .firebaserc
-    TargetFolder: '$(System.DefaultWorkingDirectory)'
+    TargetFolder: '$(System.DefaultWorkingDirectory)/dist'
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dist'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip'
